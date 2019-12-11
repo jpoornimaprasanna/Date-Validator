@@ -1,0 +1,26 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="datetime.DateTime.controller.homePage"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<Label text="Day"/>
+					<ComboBox items="{data>/Days}" class="PaginatorComboStyle" width="20%" enabled="true"
+						selectionChange="onChangeDay" selectedKey="{data>/selDay}">
+						<core:Item key="{data>day}" text="{data>day}"/>
+					</ComboBox>
+					<Label text="Month"/>
+					<ComboBox items="{data>/Months}" class="PaginatorComboStyle" width="20%" enabled="true"
+						selectionChange="onChangeMonth" selectedKey="{data>/selMonth}">
+						<core:Item key="{data>month}" text="{data>month}"/>
+					</ComboBox>
+					<Label text="Year"/>
+					<ComboBox items="{homeModel>/Year}" class="PaginatorComboStyle" width="20%" enabled="true"
+						selectionChange="onChangeYear" selectedKey="{homeModel>/selYear}">
+						<core:Item key="{homeModel>year}" text="{homeModel>year}"/>
+					</ComboBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
